@@ -1,0 +1,65 @@
+
+.login-container {
+    display: none;  
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1001;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container:target {
+    display: flex !important;
+}
+
+:target ~ .hero,
+:target ~ .features,
+:target ~ .dashboard-preview,
+:target ~ .cta,
+:target ~ footer {
+    display: none !important;
+}
+
+#home:target .login-container {
+    display: none !important;
+}
+
+.login-target {
+    width: 100%;  
+}
+
+.login-target.hidden {
+    display: none;
+}
+
+.login-box {
+    background: rgba(20, 20, 20, 0.95);
+    padding: 2rem;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+.form-group { margin-bottom: 1rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; color: #ccc; }
+.form-group input { width: 100%; padding: 0.8rem; background: rgba(40,40,40,0.8); border: 1px solid #333; border-radius: 8px; color: white; }
+.login-submit { width: 100%; background: linear-gradient(to right, #006eff, #00d4ff); border: none; padding: 1rem; border-radius: 8px; color: white; font-weight: bold; cursor: pointer; }
+.back-home a { color: #ccc; text-decoration: none; }
+.back-home a:hover { color: #00d4ff; }
+.login-body { background: #0a0a0a; color: #fff; font-family: Arial, sans-serif; }
+.form-group { margin-bottom: 1rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; color: #ccc; }
+.form-group input { width: 100%; padding: 0.8rem; background: rgba(40,40,40,0.8); border: 1px solid #333; border-radius: 8px; color: white; }
+.login-submit { width: 100%; background: linear-gradient(to right, #006eff, #00d4ff); border: none; padding: 1rem; border-radius: 8px; color: white; font-weight: bold; cursor: pointer; transition: all 0.3s; }
+.login-submit:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,212,255,0.4); }
+.back-home { text-align: center; margin-top: 1rem; }
+.back-home a { color: #ccc; text-decoration: none; }
+.back-home a:hover { color: #00d4ff; }
+
